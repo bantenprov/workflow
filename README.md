@@ -1,6 +1,9 @@
 # Workflow
 Workflow management for easily manage states and transitions in a business prosess
 
+## TODO
+See [TODO](https://github.com/bantenprov/workflow/blob/1.0/TODO.md) before use this.
+
 ## Install Laravel :
 ```bash
 $ composer create-project --prefer-dist laravel/laravel project-name "5.4.*"
@@ -13,7 +16,7 @@ $ composer require bantenprov/workflow "1.0.0"
 ```
 
 ## Edit config/app.php
-#### providers
+### providers
 
 ```php
 'providers' => [
@@ -53,7 +56,7 @@ $ php artisan migrate
 ## Contoh penggunaan :
 
 ### Trait :
-**1. WorkflowStateTrait**
+#### **1. WorkflowStateTrait**
 
 ```php
 use Bantenprov\Workflow\Traits\WorkflowStateTrait;
@@ -69,7 +72,7 @@ class WorkflowStateController extends Controller
 }
 ```
 
-**2. WorkflowTransitionTrait**
+#### **2. WorkflowTransitionTrait**
 ```php
 use Bantenprov\Workflow\Traits\WorkflowTransitionTrait;
 
@@ -85,7 +88,7 @@ class WorkflowTransitionController extends Controller
 ```
 
 
-**WorkflowStateTrait**
+### **WorkflowStateTrait sample**
 
 <div class="tg-wrap"><table class="tg">
   <tr>
@@ -154,7 +157,11 @@ class WorkflowTransitionController extends Controller
   </tr>
 </table></div>
 
+<<<<<<< HEAD
 **WorkflowTransitionTrait**
+=======
+### **WorkflowTransitionTrait sample**
+>>>>>>> 52b92cefa1e83b2299be01f8b11fedaa80fe1090
 
 <table class="tg">
   <tr>
@@ -223,11 +230,13 @@ class WorkflowTransitionController extends Controller
   </tr>
 </table>
 
-**Contoh 2**
-
+#### **Contoh 2**
+> pada aplikasi yang digunakan
 ```php
 //Controller
-public function getStateName()
+use Bantenprov\Workflow\Workflow
+...
+public function SOMETHING()
 {
     $id = 1;
     return \Workflow::getStateName($id);
@@ -237,7 +246,9 @@ public function getStateName()
 
 ```php
 //Controller
-public function getTransitionName()
+use Bantenprov\Workflow\Workflow
+...
+public function SOMETHING()
 {
     $id = 1;
     return \Workflow::getTransitionName($id);
