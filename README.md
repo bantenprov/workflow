@@ -157,11 +157,8 @@ class WorkflowTransitionController extends Controller
   </tr>
 </table></div>
 
-<<<<<<< HEAD
-**WorkflowTransitionTrait**
-=======
 ### **WorkflowTransitionTrait sample**
->>>>>>> 52b92cefa1e83b2299be01f8b11fedaa80fe1090
+
 
 <table class="tg">
   <tr>
