@@ -227,10 +227,12 @@ class WorkflowTransitionController extends Controller
 </table>
 
 **Contoh 2**
-
+> pada aplikasi yang digunakan
 ```php
 //Controller
-public function getStateName()
+use Bantenprov\Workflow\Workflow
+...
+public function SOMETHING()
 {
     $id = 1;
     return \Workflow::getStateName($id);
@@ -240,7 +242,9 @@ public function getStateName()
 
 ```php
 //Controller
-public function getTransitionName()
+use Bantenprov\Workflow\Workflow
+...
+public function SOMETHING()
 {
     $id = 1;
     return \Workflow::getTransitionName($id);
