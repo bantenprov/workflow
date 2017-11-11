@@ -16,7 +16,7 @@ $ composer bantenprov/workflow "1.0.0"
 ```
 
 ## Edit config/app.php
-#### providers
+### providers
 
 ```php
 'providers' => [
@@ -56,7 +56,7 @@ $ php artisan migrate
 ## Contoh penggunaan :
 
 ### Trait :
-**1. WorkflowStateTrait**
+#### **1. WorkflowStateTrait**
 
 ```php
 use Bantenprov\Workflow\Traits\WorkflowStateTrait;
@@ -72,7 +72,7 @@ class WorkflowStateController extends Controller
 }
 ```
 
-**2. WorkflowTransitionTrait**
+#### **2. WorkflowTransitionTrait**
 ```php
 use Bantenprov\Workflow\Traits\WorkflowTransitionTrait;
 
@@ -88,7 +88,7 @@ class WorkflowTransitionController extends Controller
 ```
 
 
-**WorkflowStateTrait**
+### **WorkflowStateTrait sample**
 
 <div class="tg-wrap"><table class="tg">
   <tr>
@@ -157,7 +157,7 @@ class WorkflowTransitionController extends Controller
   </tr>
 </table></div>
 
-**WorkflowTransitionTrait**
+### **WorkflowTransitionTrait sample**
 
 <table class="tg">
   <tr>
@@ -226,7 +226,7 @@ class WorkflowTransitionController extends Controller
   </tr>
 </table>
 
-**Contoh 2**
+#### **Contoh 2**
 > pada aplikasi yang digunakan
 ```php
 //Controller
