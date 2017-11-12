@@ -254,3 +254,37 @@ public function SOMETHING()
 }
 
 ```
+
+### CSS
+folder style.css :
+public/css/style.css
+
+```html
+<!-- layout.blade.php -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+        <title>Laravel</title>
+
+        <!-- Fonts -->
+  -->   <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
+
+```
+
+### JS
+folder custom.js :
+public/js/custom.js
+
+```html
+<!-- layout.blade.php -->
+          
+            </div>
+        </div>
+  -->   <script src="{{ asset('js/custom.js') }}"></script>
+    </body>
+</html>
+
+```
+
