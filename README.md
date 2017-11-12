@@ -269,7 +269,7 @@ public/css/style.css
         <title>Laravel</title>
 
         <!-- Fonts -->
-  -->   <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
+  -->   <link href="{{ asset('css/workflow_style.css') }}" rel="stylesheet" type="text/css">
 
 ```
 
@@ -282,7 +282,7 @@ public/js/custom.js
           
             </div>
         </div>
-  -->   <script src="{{ asset('js/custom.js') }}"></script>
+  -->   <script src="{{ asset('js/workflow_javascript.js') }}"></script>
     </body>
 </html>
 
