@@ -48,8 +48,8 @@ $ composer require bantenprov/workflow "1.0.0"
 ## Artisan command :
 
 ```bash
-$ php artisan vendor:publish --tag=workflow_migration
-$ php artisan vendor:publish --tag=workflow_view
+$ php artisan vendor:publish --tag=workflow_migrations
+$ php artisan vendor:publish --tag=workflow_views
 $ php artisan vendor:publish --tag=workflow_css
 $ php artisan vendor:publish --tag=workflow_js
 $ php artisan migrate
