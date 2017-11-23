@@ -122,9 +122,9 @@ class WorkflowServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom($packageViewsPath, 'workflow');
 
-        
+
         $this->publishes([
-            $packageViewsPath => resource_path('views/workflow'),
+            $packageViewsPath => resource_path('views/'),
         ], 'workflow_views');
     }
 
