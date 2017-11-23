@@ -1,6 +1,6 @@
 
 	<h3>Transition list</h3>
-	<a class="tambah" href="{{route('transitionFormCreate')}}">Add new transition</a>
+	<a class="tambah" href="{{route('transitionFormCreate')}}">Add new transition</a> | <a class="tambah" href="{{route('state')}}">State list</a>
 
 	<table border="1">
 		<tr>
@@ -8,7 +8,7 @@
 			<th>Label</th>
 			<th>From</th>
 			<th>To</th>
-			<th>Notification</th>
+			<th>Description</th>
 			<th>Status</th>
 			<th>Action</th>
 		</tr>
