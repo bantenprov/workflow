@@ -4,6 +4,9 @@ Workflow management for easily manage states and transitions in a business prose
 ## TODO
 See [TODO](https://github.com/bantenprov/workflow/blob/1.0/TODO.md) before use this.
 
+## DEMO
+Demo site for this packages is available here : [Workflow](http://workflow-01.dev.bantenprov.go.id/). 
+
 ## Install Laravel :
 ```bash
 $ composer create-project --prefer-dist laravel/laravel project-name "5.4.*"
