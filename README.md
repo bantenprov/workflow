@@ -1,6 +1,5 @@
 # Workflow
-Workflow management for easily manage states and transitions in a business prosess 
-update by ahmad juma
+Workflow management for easily manage states and transitions in a business prosess
 
 ## TODO
 See [TODO](https://github.com/bantenprov/workflow/blob/1.0/TODO.md) before use this.
