@@ -1,5 +1,5 @@
-# Workflow
-Workflow management for easily manage states and transitions in a business prosess.
+# Workflow Management
+Workflow management for easily manage states and transitions in a complex business prosess.
 
 The final of this package will be contained awesome feature:
 
