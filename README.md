@@ -1,5 +1,22 @@
 # Workflow
-Workflow management for easily manage states and transitions in a business prosess
+Workflow management for easily manage states and transitions in a business prosess.
+
+The final of this package will be contained awesome feature:
+
+## Worklow
+- Define a name and descriotion of the workflow, each conte type could containt more then one workflow to manage their business process
+
+## State
+- Define a collection of state name in worflow related, and describe the latest status the content in a business process  
+
+## Transition
+- Define a transition of any state in content, this feature will be handle move transition  
+
+## Guard
+- Guard give a permission to manage one or any authorization of the role management to the transition related  
+
+## Notification
+- When a state of content was change, or a transition executed a notification will be sent by system to pic related. notification displayed in user desktop related and as mail notification.
 
 ## TODO
 See [TODO](https://github.com/bantenprov/workflow/blob/1.0/TODO.md) before use this.
