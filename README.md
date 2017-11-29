@@ -1,7 +1,7 @@
 # Workflow Management
 Workflow management for easily manage states and transitions in a complex business prosess.
 
-The final of this package will be contained awesome feature:
+The final of this package will be contained some awesome feature:
 
 ## Worklow
 - Define a name and descriotion of the workflow, each conte type could containt more then one workflow to manage their business process
