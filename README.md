@@ -1,5 +1,6 @@
 # Workflow Management
 Workflow management for easily manage states and transitions in a complex business prosess.
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bantenprov/workflow/badges/quality-score.png?b=1.0)](https://scrutinizer-ci.com/g/bantenprov/workflow/?branch=1.0)
 
 The final of this package will be contained some awesome feature:
 
