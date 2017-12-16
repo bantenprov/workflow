@@ -11,7 +11,11 @@ use That0n3guy\Transliteration;
 
 class WorkflowStateController extends Controller
 {
-    
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */    
     public function index()
     {
         $states = WorkflowState::paginate(10);
@@ -19,11 +23,21 @@ class WorkflowStateController extends Controller
         return view('workflow.state.index',compact('states'));
     }
     
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return Response
+     */
     public function create()
     {
         return view('workflow.state.create');
     }
     
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @return Response
+     */
     public function store(Request $request)
     {
         $name = \Transliteration::clean_filename(strtolower($request->label));
@@ -44,11 +58,23 @@ class WorkflowStateController extends Controller
         return redirect()->route('state')->with('message', 'Add data success');
     }
     
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return Response
+     */
     public function show($id)
     {
         //
     }
     
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return Response
+     */
     public function edit($id)
     {
         $state = WorkflowState::where('id',$id)->first();
@@ -56,6 +82,12 @@ class WorkflowStateController extends Controller
         return view('workflow.state.edit',['state' => $state]);
     }
     
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
     public function update(Request $request, $id)
     {
         $name = \Transliteration::clean_filename(strtolower($request->label));
@@ -72,19 +104,35 @@ class WorkflowStateController extends Controller
 
         return redirect()->route('state')->with('message', 'Update data success');
     }
-
+    /**
+     * Activete the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
     public function Active($id){
         WorkflowState::where('id',$id)->update(['status' => 1]);
 
         return redirect()->back();
     }
-
+    /**
+     * Deactivete the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
     public function DeActive($id){
         WorkflowState::where('id',$id)->update(['status' => 0]);
 
         return redirect()->back();
     }
     
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
     public function destroy($id)
     {
         //
