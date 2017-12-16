@@ -20,13 +20,17 @@
                             <th>Workflow</th>
                             <th>State From</th>
                             <th>State To</th>
+                            <th>Timestamp</th>
+                            <th>User</th>
                         </tr>
-                        @foreach($historys as $history)
+                        @foreach($historys as $key => $history)
                             <tr>
                                 <td>{{ $history->getApiKeys->client }}</td>
                                 <td>{{ $history->getWorkflow->content_type }}</td>
                                 <td>{{ $history->getStateFrom->label }}</td>
                                 <td>{{ $history->getStateTo->label }}</td>
+                                <td>{{ $dates[$key] }}</td>
+                                <td>{{ $history->getUserName->name }}</td>
                             </tr>
                         @endforeach
                     </table>
