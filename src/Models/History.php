@@ -37,14 +37,9 @@ class History extends Model
         return $this->belongsTo('Bantenprov\Workflow\Models\WorkflowState', 'to_state', 'id');
     }
 
-    // public function getContent()
-    // {
-    //     return $this->morphMany('SopOnline');
-    // }
-    //
-    // public function getContent()
-    // {
-    //     return $this->morphMany('WorkflowTransition');
-    // }
+    public function getUserName()
+    {
+        return $this->belongsTo('App\User','user_id','id');
+    }    
 
 }
