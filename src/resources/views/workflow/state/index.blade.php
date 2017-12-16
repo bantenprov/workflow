@@ -6,6 +6,7 @@
 
 <h3>State list</h3>
 <a class="tambah" href="{{ route('stateFormCreate') }}">Add new state</a>
+<a class="tambah" href="{{ route('transition') }}">Transition list</a>
 
 <table border="1">
     <tr>

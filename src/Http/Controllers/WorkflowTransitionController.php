@@ -30,7 +30,7 @@ class WorkflowTransitionController extends Controller
 
     public function store(Request $request)
     {
-        $name = str_replace('_','-',\Transliteration::clean_filename(strtolower($req->label)));
+        $name = str_replace('_','-',\Transliteration::clean_filename(strtolower($request->label)));
         $label = $request->label;
         $from = join(',',$request->from);
         $to = join(',',$request->to);
