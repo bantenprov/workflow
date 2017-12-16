@@ -22,7 +22,7 @@ class WorkflowModel extends Model
     *
     * @var mixed
     */
-    protected $fillable = [];
+    protected $fillable = ['name', 'label', 'content_type'];
 
     /**
      * The attributes that should be hidden for arrays.
