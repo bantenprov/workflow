@@ -1,5 +1,22 @@
-# Workflow
-Workflow management for easily manage states and transitions in a business prosess
+[![Join the chat at https://gitter.im/bantenprov-workflow/Lobby](https://badges.gitter.im/bantenprov-workflow/Lobby.svg)](https://gitter.im/bantenprov-workflow/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bantenprov/workflow/badges/quality-score.png?b=1.0)](https://scrutinizer-ci.com/g/bantenprov/workflow/?branch=1.0)
+[![Build Status](https://scrutinizer-ci.com/g/bantenprov/workflow/badges/build.png?b=1.0)](https://scrutinizer-ci.com/g/bantenprov/workflow/build-status/1.0)
+
+# Workflow Management
+Workflow management for easily manage states and transitions in a complex business prosess.
+
+The final of this package will be contained some awesome feature:
+
+- Workflow
+- Workflow State
+- Workflow Transition
+- Workflow Notification
+- Workflow Guard
+- Transition Attachment
+- Attachment
+- Notification To
+- Notification cc
+- History
 
 ## TODO
 See [TODO](https://github.com/bantenprov/workflow/blob/1.0/TODO.md) before use this.
@@ -12,8 +29,11 @@ $ composer create-project --prefer-dist laravel/laravel project-name "5.4.*"
 ## Install package :
 
 ```bash
-$ composer require bantenprov/workflow "1.0.0"
+$ composer require bantenprov/workflow "1.0.1"
 ```
+
+## Edit config/config.php
+
 
 ## Edit config/app.php
 ### providers
