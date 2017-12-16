@@ -15,7 +15,7 @@ $ composer create-project --prefer-dist laravel/laravel project-name "5.4.*"
 ## Install package :
 
 ```bash
-$ composer require bantenprov/workflow "1.0.0"
+$ composer require bantenprov/workflow "1.0.1"
 ```
 
 ## Edit config/app.php
