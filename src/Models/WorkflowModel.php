@@ -15,7 +15,7 @@ class WorkflowModel extends Model
     *
     * @var string
     */
-    protected $table = 'workflow';
+    protected $table = 'workflows';
 
     /**
     * The attributes that are mass assignable.
