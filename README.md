@@ -29,6 +29,9 @@ $ composer create-project --prefer-dist laravel/laravel project-name "5.4.*"
 $ composer require bantenprov/workflow "1.0.1"
 ```
 
+## Edit config/config.php
+
+
 ## Edit config/app.php
 #### providers
 
