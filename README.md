@@ -1,5 +1,11 @@
-# Workflow
-Workflow management for easily manage states and transitions in a business prosess
+[![Join the chat at https://gitter.im/bantenprov-workflow/Lobby](https://badges.gitter.im/bantenprov-workflow/Lobby.svg)](https://gitter.im/bantenprov-workflow/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bantenprov/workflow/badges/quality-score.png?b=1.0)](https://scrutinizer-ci.com/g/bantenprov/workflow/?branch=1.0)
+[![Build Status](https://scrutinizer-ci.com/g/bantenprov/workflow/badges/build.png?b=1.0)](https://scrutinizer-ci.com/g/bantenprov/workflow/build-status/1.0)
+
+# Workflow Management
+Workflow management for easily manage states and transitions in a complex business prosess.
+
+The final of this package will be contained some awesome feature:
 
 ## Install Laravel :
 ```bash
