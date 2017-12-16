@@ -7,6 +7,17 @@ Workflow management for easily manage states and transitions in a complex busine
 
 The final of this package will be contained some awesome feature:
 
+- Workflow
+- Workflow State
+- Workflow Transition
+- Workflow Notification
+- Workflow Guard
+- Transition Attachment
+- Attachment
+- Notification To
+- Notification cc
+- History
+
 ## Install Laravel :
 ```bash
 $ composer create-project --prefer-dist laravel/laravel project-name "5.4.*"
