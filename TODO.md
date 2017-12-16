@@ -3,5 +3,5 @@
 3. Add mail notification when transition was change
 4. Create static method like:
 ```
-$users = Workflow::whereStateIs($state_id)->get();
+$content = Workflow::whereStateIs($state_id)->get();
 ```
