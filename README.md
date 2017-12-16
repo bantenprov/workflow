@@ -18,6 +18,41 @@ The final of this package will be contained some awesome feature:
 - Notification cc
 - History
 
+# Workflow Management
+
+[![Join the chat at https://gitter.im/bantenprov-workflow/Lobby](https://badges.gitter.im/bantenprov-workflow/Lobby.svg)](https://gitter.im/bantenprov-workflow/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Workflow management for easily manage states and transitions in a complex business prosess.
+
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bantenprov/workflow/badges/quality-score.png?b=1.0)](https://scrutinizer-ci.com/g/bantenprov/workflow/?branch=1.0)
+[![Build Status](https://scrutinizer-ci.com/g/bantenprov/workflow/badges/build.png?b=1.0)](https://scrutinizer-ci.com/g/bantenprov/workflow/build-status/1.0)
+
+The final of this package will be contained some awesome feature:
+
+## Worklow
+- Define a name and descriotion of the workflow, each conte type could containt more then one workflow to manage their business process
+
+## State
+- Define a collection of state name in worflow related, and describe the latest status the content in a business process  
+
+## Transition
+- Define a transition of any state in content, this feature will be handle move transition  
+
+## Guard
+- Guard give a permission to manage one or any authorization of the role management to the transition related  
+
+## Notification
+- When a state of content was change, or a transition executed a notification will be sent by system to pic related. notification displayed in user desktop related and as mail notification.
+
+## TODO
+See [TODO](https://github.com/bantenprov/workflow/blob/1.0/TODO.md) before use this.
+
+## DEMO
+Demo site for this packages is available here : [Workflow](http://workflow-01.dev.bantenprov.go.id/). 
+
+=======
+## TODO
+See [TODO](https://github.com/bantenprov/workflow/blob/1.0/TODO.md) before use this.
+
 ## Install Laravel :
 ```bash
 $ composer create-project --prefer-dist laravel/laravel project-name "5.4.*"
@@ -26,14 +61,14 @@ $ composer create-project --prefer-dist laravel/laravel project-name "5.4.*"
 ## Install package :
 
 ```bash
-$ composer require bantenprov/workflow "1.0.1"
+$ composer require bantenprov/workflow "1.0.0"
 ```
 
 ## Edit config/config.php
 
 
 ## Edit config/app.php
-#### providers
+### providers
 
 ```php
 'providers' => [
@@ -65,15 +100,17 @@ $ composer require bantenprov/workflow "1.0.1"
 ## Artisan command :
 
 ```bash
-$ php artisan vendor:publish --tag=workflow_migration
-$ php artisan vendor:publish --tag=workflow_view
+$ php artisan vendor:publish --tag=workflow_migrations
+$ php artisan vendor:publish --tag=workflow_views
+$ php artisan vendor:publish --tag=workflow_css
+$ php artisan vendor:publish --tag=workflow_js
 $ php artisan migrate
 ```
 
 ## Contoh penggunaan :
 
 ### Trait :
-**1. WorkflowStateTrait**
+#### **1. WorkflowStateTrait**
 
 ```php
 use Bantenprov\Workflow\Traits\WorkflowStateTrait;
@@ -89,7 +126,7 @@ class WorkflowStateController extends Controller
 }
 ```
 
-**2. WorkflowTransitionTrait**
+#### **2. WorkflowTransitionTrait**
 ```php
 use Bantenprov\Workflow\Traits\WorkflowTransitionTrait;
 
@@ -105,7 +142,7 @@ class WorkflowTransitionController extends Controller
 ```
 
 
-**WorkflowStateTrait**
+### **WorkflowStateTrait sample**
 
 <div class="tg-wrap"><table class="tg">
   <tr>
@@ -174,7 +211,8 @@ class WorkflowTransitionController extends Controller
   </tr>
 </table></div>
 
-**WorkflowTransitionTrait**
+### **WorkflowTransitionTrait sample**
+
 
 <table class="tg">
   <tr>
@@ -243,11 +281,13 @@ class WorkflowTransitionController extends Controller
   </tr>
 </table>
 
-**Contoh 2**
-
+#### **Contoh 2**
+> pada aplikasi yang digunakan
 ```php
 //Controller
-public function getStateName()
+use Bantenprov\Workflow\Workflow
+...
+public function SOMETHING()
 {
     $id = 1;
     return \Workflow::getStateName($id);
@@ -257,10 +297,46 @@ public function getStateName()
 
 ```php
 //Controller
-public function getTransitionName()
+use Bantenprov\Workflow\Workflow
+...
+public function SOMETHING()
 {
     $id = 1;
     return \Workflow::getTransitionName($id);
 }
 
 ```
+
+### CSS
+folder style.css :
+public/css/style.css
+
+```html
+<!-- layout.blade.php -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+        <title>Laravel</title>
+
+        <!-- Fonts -->
+  -->   <link href="{{ asset('css/workflow_style.css') }}" rel="stylesheet" type="text/css">
+
+```
+
+### JS
+folder custom.js :
+public/js/custom.js
+
+```html
+<!-- layout.blade.php -->
+          
+            </div>
+        </div>
+  -->   <script src="{{ asset('js/workflow_javascript.js') }}"></script>
+    </body>
+</html>
+
+```
+

@@ -1,8 +1,15 @@
 <?php
 
 Route::group(['prefix' => 'workflow'], function() {
-    Route::get('demo', 'Bantenprov\Workflow\Http\Controllers\WorkflowController@demo');
+    Route::get('/', 'Bantenprov\Workflow\Http\Controllers\WorkflowController@index')->name('workflow');
+    Route::get('/create', 'Bantenprov\Workflow\Http\Controllers\WorkflowController@create')->name('workflowFormCreate');
+    Route::post('/store', 'Bantenprov\Workflow\Http\Controllers\WorkflowController@store')->name('workflowStore');
+    Route::get('/{id}/edit', 'Bantenprov\Workflow\Http\Controllers\WorkflowController@edit')->name('workflowFormEdit');
+    Route::post('/{id}/update', 'Bantenprov\Workflow\Http\Controllers\WorkflowController@update')->name('workflowUpdate');
+    Route::get('demo', 'Bantenprov\Workflow\Http\Controllers\WorkflowController@demo')->name('demo');
 });
+
+Route::resource('workflow/history', 'Bantenprov\Workflow\Http\Controllers\HistoryController');
 
 // state add route (GET)
 Route::get('/workflow/state/create', 'Bantenprov\Workflow\Http\Controllers\WorkflowStateController@create')->name('stateFormCreate');
@@ -31,7 +38,7 @@ Route::post('/workflow/state/{id}/edit', 'Bantenprov\Workflow\Http\Controllers\W
 
     // transition add route (GET)
 Route::get('/workflow/transition/create', 'Bantenprov\Workflow\Http\Controllers\WorkflowTransitionController@create')->name('transitionFormCreate');
-    
+
 // transition list route (GET)
 Route::get('/workflow/transition', 'Bantenprov\Workflow\Http\Controllers\WorkflowTransitionController@index')->name('transition');
 

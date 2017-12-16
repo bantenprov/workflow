@@ -33,6 +33,8 @@ class WorkflowServiceProvider extends ServiceProvider
         $this->viewHandle();
         $this->assetHandle();
         $this->migrationHandle();
+        $this->cssHandle();
+        $this->jsHandle();
     }
 
     /**
@@ -121,7 +123,7 @@ class WorkflowServiceProvider extends ServiceProvider
         $this->loadViewsFrom($packageViewsPath, 'workflow');
 
         $this->publishes([
-            $packageViewsPath => resource_path('views/vendor/workflow'),
+            $packageViewsPath => resource_path('views/'),
         ], 'workflow_views');
     }
 
@@ -153,5 +155,23 @@ class WorkflowServiceProvider extends ServiceProvider
         $this->publishes([
             $packageMigrationsPath => database_path('migrations')
         ], 'workflow_migrations');
+    }
+
+    public function cssHandle()
+    {
+        $packageMigrationsPath = __DIR__.'/public/css';                
+
+        $this->publishes([
+            $packageMigrationsPath => base_path('public/css')
+        ], 'workflow_css');
+    }
+
+    public function jsHandle()
+    {
+        $packageMigrationsPath = __DIR__.'/public/js';                
+
+        $this->publishes([
+            $packageMigrationsPath => base_path('public/js')
+        ], 'workflow_js');
     }
 }
