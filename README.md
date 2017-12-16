@@ -18,6 +18,38 @@ The final of this package will be contained some awesome feature:
 - Notification cc
 - History
 
+# Workflow Management
+
+[![Join the chat at https://gitter.im/bantenprov-workflow/Lobby](https://badges.gitter.im/bantenprov-workflow/Lobby.svg)](https://gitter.im/bantenprov-workflow/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Workflow management for easily manage states and transitions in a complex business prosess.
+
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bantenprov/workflow/badges/quality-score.png?b=1.0)](https://scrutinizer-ci.com/g/bantenprov/workflow/?branch=1.0)
+[![Build Status](https://scrutinizer-ci.com/g/bantenprov/workflow/badges/build.png?b=1.0)](https://scrutinizer-ci.com/g/bantenprov/workflow/build-status/1.0)
+
+The final of this package will be contained some awesome feature:
+
+## Worklow
+- Define a name and descriotion of the workflow, each conte type could containt more then one workflow to manage their business process
+
+## State
+- Define a collection of state name in worflow related, and describe the latest status the content in a business process  
+
+## Transition
+- Define a transition of any state in content, this feature will be handle move transition  
+
+## Guard
+- Guard give a permission to manage one or any authorization of the role management to the transition related  
+
+## Notification
+- When a state of content was change, or a transition executed a notification will be sent by system to pic related. notification displayed in user desktop related and as mail notification.
+
+## TODO
+See [TODO](https://github.com/bantenprov/workflow/blob/1.0/TODO.md) before use this.
+
+## DEMO
+Demo site for this packages is available here : [Workflow](http://workflow-01.dev.bantenprov.go.id/). 
+
+=======
 ## TODO
 See [TODO](https://github.com/bantenprov/workflow/blob/1.0/TODO.md) before use this.
 
@@ -29,7 +61,7 @@ $ composer create-project --prefer-dist laravel/laravel project-name "5.4.*"
 ## Install package :
 
 ```bash
-$ composer require bantenprov/workflow "1.0.1"
+$ composer require bantenprov/workflow "1.0.0"
 ```
 
 ## Edit config/config.php
