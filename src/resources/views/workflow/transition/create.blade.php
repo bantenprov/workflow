@@ -1,38 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Transition form</title>
-</head>
-<body>
-	<h2>Transition Add Form</h2>
-	<a href="{{route('transition')}}">< Back to List transition</a>
-	<br>
-	<br>
-  {!! Form::open(array('route' => 'transitionCreate', 'method' => 'POST')) !!}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Create Transition
+                  <a href="{{ route('transition') }}"  class="pull-right btn btn-danger btn-xs">Back</a>
+                </div>
 
-    {!! Form::label('label','Label : ') !!}
-    {!! Form::text('label') !!}
-		<br>
-		{!! Form::label('from','From :') !!}<br>
-		<select multiple="multiple" name="from[]" id="from">
-			<option value="">-Select-</option>
-			@foreach($states as $state)
-				<option value="{{ $state->name }}">{{ $state->label }}</option>
-			@endforeach
-		</select>
-		<br>
-		{!! Form::label('to','To :') !!}<br>
-		<select multiple="multiple" name="to[]" id="from">
-			<option value="">-Select-</option>
-			@foreach($states as $state)
-				<option value="{{ $state->name }}">{{ $state->label }}</option>
-			@endforeach
-		</select>
-		<br>
-		{{ Form::textarea('message', null, ['size' => '30x5']) }}<br>
-    {!! Form::submit() !!}
-  {!! Form::close() !!}
+                <div class="panel-body">
+								  {!! Form::open(array('route' => 'transitionCreate', 'method' => 'POST')) !!}
 
-</body>
-</html>
+								    {!! Form::label('label','Label : ') !!}
+								    {!! Form::text('label') !!}
+										<br>
+										{!! Form::label('from','From :') !!}<br>
+										<select multiple="multiple" name="from[]" id="from">
+											<option value="">-Select-</option>
+											@foreach($states as $state)
+												<option value="{{ $state->name }}">{{ $state->label }}</option>
+											@endforeach
+										</select>
+										<br>
+										{!! Form::label('to','To :') !!}<br>
+										<select multiple="multiple" name="to[]" id="from">
+											<option value="">-Select-</option>
+											@foreach($states as $state)
+												<option value="{{ $state->name }}">{{ $state->label }}</option>
+											@endforeach
+										</select>
+										<br>
+										{{ Form::textarea('message', null, ['size' => '30x5']) }}<br>
+								    {!! Form::submit() !!}
+								  {!! Form::close() !!}
+							</form>
+						</div>
+				</div>
+		</div>
+</div>
+</div>

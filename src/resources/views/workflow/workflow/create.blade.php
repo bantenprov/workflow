@@ -4,16 +4,23 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Create State
-                  <a href="{{ route('state') }}"  class="pull-right btn btn-danger btn-xs">Back</a>
+                <div class="panel-heading">Create Workflow
+                  <a href="{{ route('workflow') }}"  class="pull-right btn btn-danger btn-xs">Back</a>
                 </div>
 
                 <div class="panel-body">
-								  {!! Form::open(array('route' => 'stateStore', 'method' => 'POST')) !!}
-
+								  {!! Form::open(array('route' => 'workflowStore', 'method' => 'POST')) !!}
 								    {!! Form::label('label','Label : ') !!}
 								    {!! Form::text('label') !!}
-
+										<br>
+										{!! Form::label('content_type','Content Type : ') !!}
+										<select name="content_type" id="content_type">
+											<option value="">-Select-</option>
+											@foreach($models as $model)
+												<option value="{{ $model }}">{{ $model }}</option>
+											@endforeach
+										</select>
+										<br>
 								    {!! Form::submit() !!}
 								  {!! Form::close() !!}
 							</form>
