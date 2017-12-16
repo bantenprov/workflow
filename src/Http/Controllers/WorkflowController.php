@@ -3,6 +3,7 @@
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Bantenprov\Workflow\Facades\Workflow;
+use Bantenprov\Workflow\Models\WorkflowModel;
 use Bantenprov\Workflow\Models\WorkflowTransition;
 use Bantenprov\Workflow\Models\WorkflowState;
 use That0n3guy\Transliteration;
