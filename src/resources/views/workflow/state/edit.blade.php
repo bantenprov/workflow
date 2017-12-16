@@ -1,20 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>State edit form</title>
-</head>
-<body>
-	<h2>State Edit Form</h2>
-	<a href="{{ route('state') }}">< Back to List state</a>
-	<br>
-	<br>
-  {!! Form::open(array('route' => ['stateUpdate',$state->id], 'method' => 'POST')) !!}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Edit State
+                  <a href="{{ route('state') }}"  class="pull-right btn btn-danger btn-xs">Back</a>
+                </div>
 
-    {!! Form::label('label','Label : ') !!}
-    {!! Form::text('label',$state->label) !!}
+                <div class="panel-body">
+								  {!! Form::open(array('route' => ['stateUpdate',$state->id], 'method' => 'POST')) !!}
 
-    {!! Form::submit() !!}
-  {!! Form::close() !!}
-</body>
-</html>
+								    {!! Form::label('label','Label : ') !!}
+								    {!! Form::text('label',$state->label) !!}
+
+								    {!! Form::submit() !!}
+								  {!! Form::close() !!}
+							</form>
+						</div>
+				</div>
+		</div>
+</div>
+</div>
