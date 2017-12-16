@@ -15,5 +15,10 @@
      - destoryTransitionByName($name)
 2. Add desktop notification when transition was change
 3. Add mail notification when transition was change
+4. Create static method like:
+```
+$content = Workflow::whereCurrentStateIs($state_id)->get();
+```
 4. Add activity log when transition change
 5. Add guard at the transition related to the role management
+
