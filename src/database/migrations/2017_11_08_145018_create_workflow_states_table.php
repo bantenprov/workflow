@@ -19,6 +19,7 @@ class CreateWorkflowStatesTable extends Migration
             $table->string('label',191)->comment("The label of state");
             $table->smallInteger('status')->default(0)->comment("The status of state");
             $table->timestamps();
+      			$table->softDeletes();
         });
     }
 
