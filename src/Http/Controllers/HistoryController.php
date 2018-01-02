@@ -8,6 +8,7 @@ use Bantenprov\Workflow\Facades\Workflow;
 use Bantenprov\Workflow\Models\History;
 use That0n3guy\Transliteration;
 use Carbon\Carbon;
+use Validator, Image, Session, File, Response, Redirect, Exception;
 
 class HistoryController extends Controller
 {
@@ -25,20 +26,14 @@ class HistoryController extends Controller
                          ->with('getStateTo')
                          ->with('getUserName')
                          ->paginate(10);
-      
-      $end = Carbon::parse($historys[0]->created_at);
       $now = Carbon::now();
       $dates = [];
-      
       foreach($historys as $history)
       {
         $end = Carbon::parse($history->created_at);
-        
         array_push($dates,$end->diffForHumans($now));
-        
       }
-      
-      return view('workflow.history.index',compact('historys','dates'));
+      return view('workflow.history.index',compact('historys', 'dates'));
   }
 
   /**

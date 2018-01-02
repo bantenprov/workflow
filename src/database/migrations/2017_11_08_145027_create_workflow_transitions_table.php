@@ -22,6 +22,7 @@ class CreateWorkflowTransitionsTable extends Migration
             $table->text('message')->comment("Message");
             $table->smallInteger('status')->default(0)->comment("The status of workflow");
             $table->timestamps();
+      			$table->softDeletes();
         });
     }
 

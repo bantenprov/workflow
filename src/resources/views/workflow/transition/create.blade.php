@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <div class="container">
     <div class="row">
@@ -18,7 +19,7 @@
 										<select multiple="multiple" name="from[]" id="from">
 											<option value="">-Select-</option>
 											@foreach($states as $state)
-												<option value="{{ $state->name }}">{{ $state->label }}</option>
+												<option value="{{ $state->label }}">{{ $state->label }}</option>
 											@endforeach
 										</select>
 										<br>
@@ -26,7 +27,7 @@
 										<select multiple="multiple" name="to[]" id="from">
 											<option value="">-Select-</option>
 											@foreach($states as $state)
-												<option value="{{ $state->name }}">{{ $state->label }}</option>
+												<option value="{{ $state->label }}">{{ $state->label }}</option>
 											@endforeach
 										</select>
 										<br>

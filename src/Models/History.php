@@ -2,11 +2,13 @@
 
 namespace Bantenprov\Workflow\Models;
 
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class History extends Model
 {
+    use Notifiable;
 
     protected $table = 'historys';
     public $timestamps = true;
@@ -15,7 +17,6 @@ class History extends Model
 
     protected $dates = ['deleted_at'];
     protected $fillable = array('content_id', 'workflow_id', 'from_state', 'to_state', 'user_id');
-    protected $visible = array('user_id');
 
     public function getApiKeys()
     {
@@ -40,6 +41,6 @@ class History extends Model
     public function getUserName()
     {
         return $this->belongsTo('App\User','user_id','id');
-    }    
+    }
 
 }
